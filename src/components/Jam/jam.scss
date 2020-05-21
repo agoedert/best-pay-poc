@@ -1,0 +1,50 @@
+.jam-viewer {
+  display: flex;
+  justify-content: center;
+
+  .jam {
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 0.8em;
+    color: #4d4d4d;
+
+    .jam-actions {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .jam-add-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -200%);
+        -ms-transform: translate(-50%, -200%);
+
+        img {
+          width: 85px;
+          height: 85px;
+        }
+      }
+    }
+
+    .jam-image {
+      width: 250px;
+      height: 250px;
+      display: block;
+    }
+  }
+
+  .jam:hover {
+    -moz-box-shadow: 0 0 10px #ccc;
+    -webkit-box-shadow: 0 0 10px #ccc;
+    box-shadow: 0 0 10px #ccc;
+    opacity: 0.8;
+  }
+
+  .jam:hover > .jam-actions {
+    display: flex;
+  }
+}
