@@ -4,10 +4,6 @@ import PropTypes from 'prop-types';
 import './jam.scss';
 
 class Jam extends Component {
-  componentDidMount() {
-    //console.log('Jam mounted');
-  }
-
   render() {
     return (
       <div className="jam">
@@ -19,11 +15,9 @@ class Jam extends Component {
         />
 
         <div className="jam-actions">
-          <div className="jam-add-button">
-            <a href="www.google.com">
+            <button onClick={this.props.action} className="jam-add-button">
               <img src="/assets/images/addSign.png" alt="add" />
-            </a>
-          </div>
+            </button>
         </div>
       </div>
     );

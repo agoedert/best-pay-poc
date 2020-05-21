@@ -22,6 +22,10 @@
         left: 50%;
         transform: translate(-50%, -200%);
         -ms-transform: translate(-50%, -200%);
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;  
 
         img {
           width: 85px;
@@ -46,5 +50,31 @@
 
   .jam:hover > .jam-actions {
     display: flex;
+  }
+}
+
+.cart {
+  display: flex;
+  justify-content: center;
+  transform: scale(0.5, 0.5);
+  font-size: xx-large;
+
+  .amount {
+      margin: 30px;    
+  }
+
+  .cart-buy-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .cart-remove-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transform: scale(0.68, 0.68);
   }
 }
