@@ -29,7 +29,15 @@ class JamViewer extends Component {
   }
 
   buyProducts() {
-    alert('comprar');
+    window.Onepay.checkout({
+      endpoint: 'http://localhost:8080/create-transaction',
+      commerceLogo: 'http://localhost:3000/assets/images/logo-lekker-jar-30.png',
+      callbackUrl: './onepay-result',
+      transactionDescription: 'Valor total de las mermeladas',
+      onclose: function (status) {
+          console.log('el estado recibido es: ', status);
+      }
+    });
   }
 
   removeProduct() {
